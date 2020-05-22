@@ -37,9 +37,9 @@ img.ram-header-backgroud{
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 80px;
-	line-height: 94px;
+	font-size: 5em;
 	text-align: center;
+	line-height: 1.1;
 }
 
 .header-text .header-sub{
@@ -71,7 +71,7 @@ img.ram-header-backgroud{
 	background: rgba(255, 255, 255, 0.16);
 	opacity:1;
 	border:1px solid rgba(255, 255, 255, 1);
-	width:422px;
+	width:40%;
 	position:static;
 	border-radius: 1.5em;
 	color:rgba(255, 255, 255,1);
@@ -111,7 +111,6 @@ img.ram-header-backgroud{
 
 .site-main{
 	background: white;
-	padding: 9rem;
 }
 
 .header-filter{
@@ -217,5 +216,109 @@ img.ram-header-backgroud{
 	line-height: 19px;
 	letter-spacing: 0.1em;
 	color: #000000;
+}
+
+@media (min-width: 1281px) {
+
+	.site-main{
+		padding: 9rem;
+	}
+
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+	.site-main{
+		padding: 7rem;
+	}
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+	.site-main{
+		padding: 5rem;
+	}
+
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+	.site-main{
+		padding: 3rem;
+	}
+
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+
+	.site-main{
+		padding: 2rem;
+	}
+
+	.header-text .header-title{
+		font-size: 2rem;
+	}
+	.header-text .header-sub{
+		font-size: 1rem;
+		line-height: unset;
+	}
+	.header-line{
+		margin: 12px 0px;
+	}
+
+	.header-search input[type=search]{
+		width: 80%;
+	}
+
+}
+
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (max-width: 480px) {
+
+	.site-main{
+		padding: 1rem;
+	}
+
+	.header-text .header-title{
+		font-size: 2rem;
+	}
+
+	.header-text .header-sub{
+		font-size: 1rem;
+		line-height: unset;
+	}
+	.header-line{
+		margin: 12px 0px;
+	}
+
+	.header-search input[type=search]{
+		width: 100%;
+	}
+
+	.header-search .search-btn{
+		display: none;
+	}
+
 
 }
