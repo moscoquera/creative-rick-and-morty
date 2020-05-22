@@ -31,7 +31,7 @@ class RAM_character
                 'show_in_rest'=>true,
                 'menu_position'=>6,
                 'menu_icon'=>RAM_character::POST_TYPE_MENU_ICON,
-                'supports'=>array('title'),
+                'supports'=>array('title','custom-fields'),
                 'register_meta_box_cb'=>array(RAM_character::class,'register_post_meta_boxes'),
             )
         );
@@ -100,7 +100,7 @@ class RAM_character
 
         $client = new Client();
         while($imported<$limit){
-            $page=intval(ceil($imported/$api_limit));
+            $page=intval($imported/$api_limit)+1;
             try {
                 $response = $client->request('GET', $endpoint . "?page=$page");
             }
