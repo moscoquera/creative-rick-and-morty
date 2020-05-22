@@ -10,6 +10,14 @@ var searchTimer, searchDelay = 250;
 
 
 jQuery(document).ready(function () {
+    wp.api.loadPromise.done( function() {
+        init();
+    } )
+
+});
+
+
+function init(){
     characters_collection = new wp.api.collections.Ram_character();
     characters_collection.on('add',new_character);
     characters_collection.on('sync',collection_synced);
@@ -28,7 +36,7 @@ jQuery(document).ready(function () {
     });
 
     loadCharacters();
-});
+}
 
 jQuery(window).on("scroll",EndOfScroll);
 
